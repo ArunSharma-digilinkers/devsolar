@@ -30,8 +30,6 @@ $(document).ready(function() {
 
 
 
-
-
   $(document).ready(function () {
     $('.testimonial-carousel').owlCarousel({
         loop: true,
@@ -47,6 +45,46 @@ $(document).ready(function() {
             1200: { items: 3 }
         }
     });
+});
+
+
+
+$(document).ready(function () {
+
+    var owl = $('.gallery-carousel');
+
+    owl.owlCarousel({
+        loop: false,
+        margin: 25,
+        autoplay: false,
+        smartSpeed: 800,
+        dots: true,
+        nav: true,
+navText: [
+    '<i class="fa fa-angle-left"></i>',
+    '<i class="fa fa-angle-right"></i>'
+],
+        responsive: {
+            0: { items: 4 },
+            768: { items: 4 },
+            1200: { items: 4 }
+        },
+        onInitialized: toggleNav,
+        onResized: toggleNav
+    });
+
+    function toggleNav(event) {
+        var carousel = event.relatedTarget;
+        var currentItems = carousel.settings.items;
+        var totalItems = carousel.items().length;
+
+        if (totalItems <= currentItems) {
+            $(event.target).find('.owl-nav').hide();
+        } else {
+            $(event.target).find('.owl-nav').show();
+        }
+    }
+
 });
 
   document.querySelectorAll('.ckeditor').forEach((editor) => {
@@ -142,43 +180,6 @@ observer.observe(document.querySelector('.counter-wrapper'));
 // counter end
 
 
-$(document).ready(function () {
-
-    var owl = $('.gallery-carousel');
-
-    owl.owlCarousel({
-        loop: false,
-        margin: 25,
-        autoplay: false,
-        smartSpeed: 800,
-        dots: true,
-        nav: true,
-navText: [
-    '<i class="fa fa-angle-left"></i>',
-    '<i class="fa fa-angle-right"></i>'
-],
-        responsive: {
-            0: { items: 4 },
-            768: { items: 4 },
-            1200: { items: 4 }
-        },
-        onInitialized: toggleNav,
-        onResized: toggleNav
-    });
-
-    function toggleNav(event) {
-        var carousel = event.relatedTarget;
-        var currentItems = carousel.settings.items;
-        var totalItems = carousel.items().length;
-
-        if (totalItems <= currentItems) {
-            $(event.target).find('.owl-nav').hide();
-        } else {
-            $(event.target).find('.owl-nav').show();
-        }
-    }
-
-});
 
 
 $(document).ready(function () {
@@ -228,4 +229,13 @@ function openTab(evt, id) {
 }
 
 
+//   Gallery
+function openLightbox(src) {
+    document.getElementById('lightbox').style.display = 'block';
+    document.getElementById('lightbox-img').src = src;
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+}
 

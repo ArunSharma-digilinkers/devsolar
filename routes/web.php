@@ -14,8 +14,9 @@ use App\Http\Controllers\Admin\CouponController;
 use App\Http\Controllers\Admin\ShippingZoneController;
 use App\Http\Controllers\UserDashboardController;
 use App\Http\Controllers\AddressController;
-use App\Http\Controllers\BlogController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\Admin\GalleryController;
 
 
 
@@ -24,7 +25,8 @@ Route::get('/about-us', [PagesController::class, 'about']);
 Route::get('/contact-us', [PagesController::class, 'contact']);
 Route::get('/gallery', [PagesController::class, 'gallery']);
 Route::get('/franchise', [PagesController::class, 'franchise']);
-Route::get('/blog', [PagesController::class, 'blog']);
+Route::get('/blog', [PagesController::class, 'blog'])->name('blog');
+Route::get('/details/{slug}', [PagesController::class, 'showblog'])->name('details.showblog');
 
 // Products
 Route::get('solar-panel', [PagesController::class, 'solarpanel']);
@@ -52,6 +54,7 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
   Route::resource('shipping-zones', ShippingZoneController::class)->except('show');
   Route::resource('blog', BlogController::class);
   Route::resource('abandoned-checkouts', App\Http\Controllers\Admin\AbandonedCheckoutController::class)->only(['index', 'show', 'destroy']);
+   Route::resource('gallery', GalleryController::class);
 });
 
 /* USER ROUTES */

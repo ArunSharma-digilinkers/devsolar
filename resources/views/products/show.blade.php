@@ -197,73 +197,44 @@
 
             </div>
 
+            @php
+            $tabs = [
+            'desc' => ['label' => 'Description', 'content' => $product->description],
+            'tech' => ['label' => 'Technical', 'content' => $product->technical_features],
+            'war' => ['label' => 'Warranty', 'content' => $product->warranty],
+            ];
 
-            <div class="col-lg-12 mt-5">
+            // Filter only non-empty tabs
+            $tabs = array_filter($tabs, fn($tab) => !empty(trim(strip_tags($tab['content']))));
 
-                <div class="product-tabs-wrapper">
+            // Get first tab key
+            $firstTab = array_key_first($tabs);
+            @endphp
 
-                    <!-- TAB HEADERS (ONE ROW) -->
-                    <ul class="nav product-tabs" role="tablist">
+            @if(count($tabs) > 0)
 
-                        @if(!empty(strip_tags($product->description)))
-                        <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#desc">
-                                Description
-                            </button>
-                        </li>
-                        @endif
+            <div class="product-tabs mt-5">
 
-                        @if(!empty($product->technical_features))
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#features">
-                                Features
-                            </button>
-                        </li>
-                        @endif
-
-                        @if(!empty($product->warranty))
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#warranty">
-                                Warranty
-                            </button>
-                        </li>
-                        @endif
-
-                    </ul>
-
-                    <!-- TAB CONTENT -->
-                    @php
-                    $firstContent = true;
-                    @endphp
-
-                    <div class="tab-content product-tab-content">
-
-                        @if(!empty(strip_tags($product->description)))
-                        <div class="tab-pane fade {{ $firstContent ? 'show active' : '' }}" id="desc">
-                            {!! $product->description !!}
-                        </div>
-                        @php $firstContent = false; @endphp
-                        @endif
-
-                        @if(!empty($product->technical_features))
-                        <div class="tab-pane fade {{ $firstContent ? 'show active' : '' }}" id="features">
-                            {!! $product->technical_features !!}
-                        </div>
-                        @php $firstContent = false; @endphp
-                        @endif
-
-                        @if(!empty($product->warranty))
-                        <div class="tab-pane fade {{ $firstContent ? 'show active' : '' }}" id="warranty">
-                            {!! $product->warranty !!}
-                        </div>
-                        @php $firstContent = false; @endphp
-                        @endif
-
-                    </div>
-
+                {{-- Buttons --}}
+                <div class="tab-buttons">
+                    @foreach($tabs as $key => $tab)
+                    <button type="button" class="tab-btn {{ $key === $firstTab ? 'active' : '' }}"
+                        onclick="openTab(event,'{{ $key }}')">
+                        {{ $tab['label'] }}
+                    </button>
+                    @endforeach
                 </div>
 
+                {{-- Content --}}
+                @foreach($tabs as $key => $tab)
+                <div id="{{ $key }}" class="tab-content {{ $key === $firstTab ? 'active' : '' }}">
+                    {!! $tab['content'] !!}
+                </div>
+                @endforeach
+
             </div>
+
+            @endif
 
             {{-- ADD ON PRODUCTS --}}
             @if ($product->addons->count())

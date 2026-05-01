@@ -30,30 +30,12 @@
                             For Dealership Uttar Pradesh :-
                         </p>
                         <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-6396855242"> +91-6396855242</a>,<a
-                                href="tel:+91-9259538265"> +91-9259538265</a>
+                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-9528029761"> +91-9528029761</a>
                         </p>
                         <p>
-                            For Dealership:- <br>Jharkhand, Punjab, Haryana, Odisha, West Bengal
+                           <i class="fa-solid fa-phone"></i> <a href="tel:+91-9259538265"> +91-9259538265</a>
                         </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-6396855244"> +91-6396855244</a>,<a
-                                href="tel:+91-9528029750"> +91-9528029750</a>
-                        </p>
-                        <p>
-                            For Dealership Other State :-
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-9528029761">+91-9528029761</a>,<a
-                                href="tel:+91-9528029750"> +91-9528029750</a>
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-9258288614">+91-9258288614</a>,<a
-                                href="tel:+91-9259538265">+91-9259538265</a>
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-6396855247">+91-6396855247</a>
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
@@ -68,20 +50,7 @@
                             <i class="fa-solid fa-globe"></i> <a
                                 href="mailto:sales@nexussolarenergy.in">sales@nexussolarenergy.in</a>
                         </p>
-                        <p>
-                            Sales Enquiry :-
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-6396855243">+91-6396855243</a>, <a
-                                href="tel:9528029745">+91-9528029745</a>
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91 9258288615">+91 9258288615</a>, <a
-                                href="tel:+91-9258288616,">+91-9258288616</a>
-                        </p>
-                        <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-6396855245">+91-6396855245</a>
-                        </p>
+                        
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
@@ -97,43 +66,9 @@
                                 href="mailto:complaint@nexussolarenergy.in">complaint@nexussolarenergy.in</a>
                         </p>
                         <p>
-                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-6396855249">+91-6396855249</a>, <a
-                                href="tel:+91-6396855248">+91-6396855248</a>
+                            <i class="fa-solid fa-phone"></i> <a href="tel:+91-9258288614">+91-9258288614</a>, <a
+                                href="tel:+91-9258288615">+91-9258288615</a>
                         </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 mt-4">
-                    <div class="contact-number-wrap">
-                        <h4>
-                            Address
-                        </h4>
-                        <p>
-                            Our support team is spread across the country to give you answers fast.
-                        </p>
-                        <p>
-                            <b>Office Address :-</b>
-                        </p>
-                        <p>
-                            Chola Choki, Industial Area, Bulandshahr(U.P)-203202
-                        </p>
-                        <p>
-                            <b>Factory Address :- </b>
-                        </p>
-                        <p>
-                            Old G.T. Rd, Shahpur kalan, Uttar Pradesh 203203
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 mt-4">
-                    <div class="contact-number-wrap">
-                        <h4>
-                            Join our team
-                        </h4>
-                        <p>
-                            Are you interested in joining us as our distribution partner. Get in touch.
-                        </p>
-
                     </div>
                 </div>
             </div>

@@ -3,22 +3,36 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Order;
+use App\Models\Product;
+use App\Models\Category;
+
 
 class DashboardController extends Controller
 {
     public function index()
     {
-        // Basic stats
-        $totalUsers = User::count();
-        $activeUsers = User::where('status', 1)->count();
-        $adminUsers = User::where('role', 'admin')->count();
+        $totalUsers = User::where('role', 'user')->count();
+        $totalOrders = Order::count();
+        $pendingOrders = Order::where('status', 'pending')->count();
+        $revenue = Order::where('payment_status', 'paid')->sum('total_amount');
+        $totalProducts = Product::count();
+        $totalCategories = Category::count();
+
+        $recentOrders = Order::with('user')
+            ->latest()
+            ->take(10)
+            ->get();
 
         return view('admin.dashboard', compact(
             'totalUsers',
-            'activeUsers',
-            'adminUsers'
+            'totalOrders',
+            'pendingOrders',
+            'revenue',
+            'totalProducts',
+            'totalCategories',
+            'recentOrders'
         ));
     }
 }

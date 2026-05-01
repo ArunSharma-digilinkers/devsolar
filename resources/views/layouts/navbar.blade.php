@@ -44,7 +44,7 @@
 
                     <!-- Blog -->
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->is('blog*') ? 'active' : '' }}" href="#">Blog</a>
+                        <a class="nav-link {{ request()->is('blog*') ? 'active' : '' }}" href="{{ url('blog') }}">Blog</a>
                     </li>
 
                     <!-- Gallery -->
@@ -57,10 +57,7 @@
                         <a class="nav-link {{ request()->is('contact-us') ? 'active' : '' }}" href="{{ url('contact-us') }}">Contact</a>
                     </li>
 
-                    <!-- Franchise -->
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('franchise') ? 'active' : '' }}" href="{{ url('franchise') }}">Franchise</a>
-                    </li>
+                 
 
                     <!-- Cart -->
                     <li class="nav-item position-relative ms-lg-3">

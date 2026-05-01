@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use App\Models\Category;
+use App\Models\Gallery;
 use App\Models\User;
+use App\Models\Blog;
 
 class PagesController extends Controller
 {
@@ -26,8 +28,14 @@ class PagesController extends Controller
         return view('pages.about-us');
     }
 
-      public function blog() {
-        return view('pages.blog');
+    public function blog(){
+         $blogs = Blog::orderBy('id', 'DESC')->get();
+        return view('pages.blog', compact('blogs'));
+    }
+
+       public function showblog($slug){
+        $blogs = Blog::where('slug', $slug)->firstOrFail();
+        return view('pages.details', compact('blogs'));
     }
 
     public function contact() {
@@ -35,7 +43,8 @@ class PagesController extends Controller
     }
 
      public function gallery() {
-        return view('pages.gallery');
+         $galleries = Gallery::latest()->get();
+        return view('pages.gallery', compact('galleries'));
     }
 
       public function franchise() {

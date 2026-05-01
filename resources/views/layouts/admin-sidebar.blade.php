@@ -14,16 +14,28 @@
                 <span>Dashboard</span>
             </a>
         </li>
+        <li>
+            <a href="{{ route('user.index') }}"><i class="fa-solid fa-users"></i> <span>Users</span></a>
+        </li>
+        <li>
+            <a href="{{ route('categories.index') }}"><i class="fa-solid fa-users"></i> <span>Categories</span></a>
+        </li>
+        <li>
+            <a href="{{ route('products.index') }}"><i class="fa-solid fa-box"></i> <span>Products</span></a>
+        </li>
+        <li>
+            <a href="{{ route('orders.index') }}"><i class="fa-solid fa-cart-shopping"></i> <span>Orders</span></a>
+        </li>
+         <li>
+            <a href="{{ route('coupons.index') }}"><i class="fa-solid fa-ticket-simple"></i> <span>Coupon</span></a>
+        </li>
+        <li>
+            <a href="{{ route('abandoned-checkouts.index') }}"><i class="fa-solid fa-gear"></i> <span>Abandoned Checkouts</span></a>
+        </li>
+        <li><a href="{{ route('gallery.index') }}"><i class="fa-solid fa-file"></i> Gallery</a></li>
 
-        <li><a href="{{ route('categories.index') }}"><i class="fa-solid fa-users"></i> <span>Categories</span></a></li>
-        <li><a href="{{ route('products.index') }}"><i class="fa-solid fa-box"></i> <span>Products</span></a></li>
-        <li><a href="{{ route('orders.index') }}"><i class="fa-solid fa-cart-shopping"></i> <span>Orders</span></a></li>
-         <li><a href="{{ route('coupons.index') }}"><i class="fa-solid fa-ticket-simple"></i> <span>Coupon</span></a></li>
-        <li><a href="{{ route('user.index') }}"><i class="fa-solid fa-users"></i> <span>Users</span></a></li>
-        <li><a href="{{ route('abandoned-checkouts.index') }}"><i class="fa-solid fa-gear"></i> <span>Abandoned Checkouts</span></a></li>
-        <!-- <li><a href="#"><i class="fa-solid fa-file"></i> Pages</a></li>
-        <li><a href="#"><i class="fa-solid fa-lock"></i> Permissions</a></li> -->
-
+         <li><a href="{{ route('blog.index') }}"><i class="fa-solid fa-file"></i> Blog</a></li>
+        <!-- <li><a href="#"><i class="fa-solid fa-lock"></i> Permissions</a></li> -->
     </ul>
 
     <!-- LOGOUT -->
